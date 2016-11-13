@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab03.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="411.0" layoutY="72.0" onAction="#handleimulate" prefHeight="34.0" prefWidth="99.0" text="Simulate" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="34.0" layoutY="48.0" prefHeight="34.0" prefWidth="115.0" text="No. Of Replications" />
+      <Label layoutX="34.0" layoutY="89.0" prefHeight="34.0" prefWidth="115.0" text="Sample Size Stream" />
+      <TableView fx:id="table_sim" layoutX="14.0" layoutY="174.0" prefHeight="242.0" prefWidth="675.0">
+        <columns>
+          <TableColumn fx:id="col_replication" prefWidth="75.0" text="Replication" />
+          <TableColumn fx:id="col_samplesize" prefWidth="75.0" text="Sample Size" />
+            <TableColumn fx:id="col_hitcount" prefWidth="75.0" text="Hit Count" />
+            <TableColumn fx:id="col_estimatedpi" prefWidth="75.0" text="Estimated Pi" />
+            <TableColumn fx:id="col_variance" prefWidth="66.0" text="Variance " />
+            <TableColumn fx:id="col_finalvariance" prefWidth="94.0" text="Final Variance " />
+            <TableColumn fx:id="col_standarddeviation" prefWidth="99.0" text="Stand. Deviation" />
+            <TableColumn fx:id="col_cilb" prefWidth="61.0" text="CILB" />
+            <TableColumn fx:id="col_ciub" prefWidth="55.0" text="CIUB" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_replicaiton" layoutX="149.0" layoutY="44.0" prefHeight="34.0" prefWidth="227.0" />
+      <TextField fx:id="txt_streamsize" layoutX="149.0" layoutY="94.0" prefHeight="34.0" prefWidth="227.0" />
+      <Button fx:id="visualize" layoutX="226.0" layoutY="433.0" mnemonicParsing="false" onAction="#handleVisualize" prefHeight="34.0" prefWidth="115.0" text="Visualize" />
+    </children>
+</AnchorPane>
